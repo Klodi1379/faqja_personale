@@ -1,5 +1,17 @@
+// Define types for our data
+type ExperienceItem = {
+  id: number;
+  title: string;
+  company?: string;
+  institution?: string;
+  location: string;
+  period: string;
+  responsibilities?: string[];
+  details?: string[];
+};
+
 // Sample experience data - replace with your own experience
-const experienceData = [
+const experienceData: ExperienceItem[] = [
   {
     id: 1,
     title: "Senior Frontend Developer",
@@ -42,7 +54,7 @@ const experienceData = [
 ];
 
 // Sample education data - replace with your own education
-const educationData = [
+const educationData: ExperienceItem[] = [
   {
     id: 1,
     degree: "Master of Science in Computer Science",
@@ -69,7 +81,7 @@ const educationData = [
   },
 ];
 
-const ExperienceItem = ({ item }) => {
+const ExperienceItem = ({ item }: { item: ExperienceItem }) => {
   return (
     <div className="mb-8 relative pl-8 before:content-[''] before:absolute before:left-0 before:top-2 before:w-4 before:h-4 before:bg-primary before:rounded-full before:z-10 after:content-[''] after:absolute after:left-2 after:top-2 after:h-full after:w-0.5 after:bg-gray-200 dark:after:bg-gray-700 last:after:hidden">
       <div className="bg-white dark:bg-dark/80 p-5 rounded-lg shadow-sm">
