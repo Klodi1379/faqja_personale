@@ -95,7 +95,7 @@ const ExperienceItem = ({ item }: { item: ExperienceItem }) => {
         </div>
         <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">{item.location}</p>
         <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
-          {(item.responsibilities || item.details).map((point, index) => (
+          {(item.responsibilities || item.details || []).map((point, index) => (
             <li key={index}>{point}</li>
           ))}
         </ul>
