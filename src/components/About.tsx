@@ -10,7 +10,7 @@ const About = () => {
           <div className="order-2 md:order-1">
             <h3 className="text-2xl font-bold mb-4">Who I Am</h3>
             <p className="text-gray-700 dark:text-gray-300 mb-6">
-              I'm a passionate software developer with expertise in building modern web applications.
+              I&apos;m a passionate software developer with expertise in building modern web applications.
               With a strong foundation in both frontend and backend technologies, I enjoy creating
               seamless, user-friendly experiences that solve real-world problems.
             </p>

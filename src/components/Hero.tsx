@@ -7,7 +7,7 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="md:w-1/2">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              <span className="text-primary">Hello, I'm</span> <br />
+              <span className="text-primary">Hello, I&apos;m</span> <br />
               <span className="text-foreground">Your Name</span>
             </h1>
             <h2 className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8">

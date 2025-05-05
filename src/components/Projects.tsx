@@ -90,7 +90,7 @@ const Projects = () => {
           My <span className="text-primary">Projects</span>
         </h2>
         <p className="text-center text-gray-700 dark:text-gray-300 mb-12 max-w-3xl mx-auto">
-          Here are some of the projects I've worked on. Each project represents different challenges and solutions.
+          Here are some of the projects I&apos;ve worked on. Each project represents different challenges and solutions.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
