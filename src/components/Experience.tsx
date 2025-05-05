@@ -58,6 +58,7 @@ const experienceData: ExperienceItem[] = [
 const educationData: ExperienceItem[] = [
   {
     id: 1,
+    title: "Master of Science in Computer Science",
     degree: "Master of Science in Computer Science",
     institution: "University of Technology",
     location: "San Francisco, CA",
@@ -70,6 +71,7 @@ const educationData: ExperienceItem[] = [
   },
   {
     id: 2,
+    title: "Bachelor of Science in Computer Science",
     degree: "Bachelor of Science in Computer Science",
     institution: "State University",
     location: "Boston, MA",
