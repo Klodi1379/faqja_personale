@@ -4,6 +4,7 @@ type ExperienceItem = {
   title: string;
   company?: string;
   institution?: string;
+  degree?: string;
   location: string;
   period: string;
   responsibilities?: string[];
