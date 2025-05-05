@@ -1,7 +1,17 @@
 import Link from "next/link";
 
+// Define types for our project data
+type Project = {
+  id: number;
+  title: string;
+  description: string;
+  technologies: string[];
+  liveDemo?: string;
+  sourceCode?: string;
+};
+
 // Sample project data - replace with your own projects
-const projectsData = [
+const projectsData: Project[] = [
   {
     id: 1,
     title: "E-Commerce Platform",
@@ -31,7 +41,7 @@ const projectsData = [
   },
 ];
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <div className="card hover:translate-y-[-5px] transition-all duration-300">
       <div className="w-full h-48 mb-4 rounded-md overflow-hidden bg-gray-300 flex items-center justify-center">
