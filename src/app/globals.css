@@ -4,18 +4,18 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #2D3047;
-  --primary: #2D3047;
-  --secondary: #7C90A0;
-  --accent: #B38D97;
-  --dark: #1C1C28;
-  --light: #F5F5F7;
+  --foreground: #0F172A;
+  --primary: #0F766E;
+  --secondary: #1E40AF;
+  --accent: #F59E0B;
+  --dark: #0F172A;
+  --light: #F8FAFC;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #1C1C28;
-    --foreground: #F5F5F7;
+    --background: #0F172A;
+    --foreground: #F8FAFC;
   }
 }
 
