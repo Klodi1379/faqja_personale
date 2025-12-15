@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,6 +19,15 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
@@ -29,42 +37,47 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto p-4 flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold text-primary">
+        <a href="#" className="text-2xl font-bold text-primary" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
           YourName
-        </Link>
+        </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <Link
-            href="/#about"
+          <a
+            href="#about"
+            onClick={(e) => scrollToSection(e, 'about')}
             className="text-foreground hover:text-primary transition-colors"
           >
             About
-          </Link>
-          <Link
-            href="/#projects"
+          </a>
+          <a
+            href="#projects"
+            onClick={(e) => scrollToSection(e, 'projects')}
             className="text-foreground hover:text-primary transition-colors"
           >
             Projects
-          </Link>
-          <Link
-            href="/#skills"
+          </a>
+          <a
+            href="#skills"
+            onClick={(e) => scrollToSection(e, 'skills')}
             className="text-foreground hover:text-primary transition-colors"
           >
             Skills
-          </Link>
-          <Link
-            href="/#experience"
+          </a>
+          <a
+            href="#experience"
+            onClick={(e) => scrollToSection(e, 'experience')}
             className="text-foreground hover:text-primary transition-colors"
           >
             Experience
-          </Link>
-          <Link
-            href="/#contact"
+          </a>
+          <a
+            href="#contact"
+            onClick={(e) => scrollToSection(e, 'contact')}
             className="btn btn-primary"
           >
             Contact Me
-          </Link>
+          </a>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -111,41 +124,41 @@ const Navbar = () => {
       {isMenuOpen && (
         <nav className="md:hidden bg-white dark:bg-dark shadow-lg">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-            <Link
-              href="/#about"
+            <a
+              href="#about"
               className="text-foreground hover:text-primary transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={(e) => scrollToSection(e, 'about')}
             >
               About
-            </Link>
-            <Link
-              href="/#projects"
+            </a>
+            <a
+              href="#projects"
               className="text-foreground hover:text-primary transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={(e) => scrollToSection(e, 'projects')}
             >
               Projects
-            </Link>
-            <Link
-              href="/#skills"
+            </a>
+            <a
+              href="#skills"
               className="text-foreground hover:text-primary transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={(e) => scrollToSection(e, 'skills')}
             >
               Skills
-            </Link>
-            <Link
-              href="/#experience"
+            </a>
+            <a
+              href="#experience"
               className="text-foreground hover:text-primary transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={(e) => scrollToSection(e, 'experience')}
             >
               Experience
-            </Link>
-            <Link
-              href="/#contact"
+            </a>
+            <a
+              href="#contact"
               className="btn btn-primary w-full text-center"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={(e) => scrollToSection(e, 'contact')}
             >
               Contact Me
-            </Link>
+            </a>
           </div>
         </nav>
       )}
