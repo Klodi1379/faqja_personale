@@ -1,3 +1,9 @@
+// Types for skills data
+type Skill = {
+  name: string;
+  level?: string;
+};
+
 // Sample skills data - replace with your own skills
 const skillsData = {
   frontend: [
@@ -42,7 +48,7 @@ const skillsData = {
   ],
 };
 
-const SkillCategory = ({ title, skills }) => {
+const SkillCategory = ({ title, skills }: { title: string; skills: Skill[] }) => {
   return (
     <div className="mb-8">
       <h3 className="text-xl font-bold mb-4 text-primary">{title}</h3>
@@ -65,7 +71,7 @@ const SkillCategory = ({ title, skills }) => {
   );
 };
 
-const SoftSkills = ({ skills }) => {
+const SoftSkills = ({ skills }: { skills: string[] }) => {
   return (
     <div className="mb-8">
       <h3 className="text-xl font-bold mb-4 text-primary">Soft Skills</h3>
