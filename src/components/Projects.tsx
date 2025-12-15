@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 // Define types for our project data
 type Project = {
   id: number;
@@ -110,14 +108,14 @@ const Projects = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Link
+          <a
             href="https://github.com/yourusername"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-outline"
           >
             See More on GitHub
-          </Link>
+          </a>
         </div>
       </div>
     </section>
